@@ -42,4 +42,6 @@ class BaseTableViewController: UITableViewController {
 
         cell.detailTextLabel?.text = "\(priceString!) | \(product.yearIntroduced)"
     }
+    
+   
 }

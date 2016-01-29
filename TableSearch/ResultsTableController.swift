@@ -27,4 +27,6 @@ class ResultsTableController: BaseTableViewController {
         
         return cell
     }
+    
+    
 }

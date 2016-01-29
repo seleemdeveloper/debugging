@@ -91,8 +91,8 @@ class DetailViewController: UIViewController {
         }
         
         if product.title == Product.Hardware.iPod.rawValue {
-            priceLabel.hidden = true
-            //priceLabel.text = "Please Contact Us For Pricing"
+            //priceLabel.hidden = true
+            priceLabel.text = "Please Contact Us For Pricing"
         }
         
         

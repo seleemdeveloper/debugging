@@ -85,6 +85,8 @@ class MainTableViewController: BaseTableViewController, UISearchBarDelegate, UIS
         }
     }
     
+    
+    
     // MARK: UISearchBarDelegate
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -264,5 +266,38 @@ class MainTableViewController: BaseTableViewController, UISearchBarDelegate, UIS
         
         // Restore the text in the search field.
         searchController.searchBar.text = coder.decodeObjectForKey(RestorationKeys.searchBarText.rawValue) as? String
+    }
+    
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            checkAllProductsForCoupons()
+        }
+    }
+    
+    func checkAllProductsForCoupons(){
+        
+        for var i = self.products.count; i >= 0; i-- {
+           let product = self.products[i]
+            checkCurrentCoupon(product)
+            
+        }
+        
+    }
+    
+    func checkCurrentCoupon(product : Product){
+        
+        switch product.title{
+        case "iPad":
+            //push coupon view
+            break
+        default:
+            //No coupon, do Nothing
+            break
+        }
     }
 }
