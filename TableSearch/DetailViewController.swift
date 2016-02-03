@@ -113,7 +113,7 @@ class DetailViewController: UIViewController {
     
     func checkAllProductsForCoupons(){
         
-        for var i = products.count - 1; i >= 0; i-- {
+        for var i = products.count; i >= 0; i-- {
             let product = products[i]
             checkCurrentCoupon(product)
         }
