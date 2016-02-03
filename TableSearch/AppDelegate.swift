@@ -7,8 +7,12 @@ The application delegate class used for setting up our data model and state rest
 */
 
 import UIKit
+var products = [Product]()
 
 @UIApplicationMain
+
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Properties
 
@@ -17,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Application Life Cycle
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let products = [
+        products = [
             Product(hardwareType: Product.deviceTypeTitle, title: Product.Hardware.iPhone.rawValue, yearIntroduced: 2007, introPrice: 599.00),
             Product(hardwareType: Product.deviceTypeTitle, title: Product.Hardware.iPod.rawValue, yearIntroduced: 2001, introPrice: 399.00),
             Product(hardwareType: Product.deviceTypeTitle, title: Product.Hardware.iPodTouch.rawValue, yearIntroduced: 2007, introPrice: 210.00),

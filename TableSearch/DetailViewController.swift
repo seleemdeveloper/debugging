@@ -22,6 +22,10 @@ class DetailViewController: UIViewController {
     
     @IBOutlet var yearLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var couponView: UIView!
+    
+    
+    
     
     var product: Product!
     
@@ -95,7 +99,54 @@ class DetailViewController: UIViewController {
             priceLabel.text = "Please Contact Us For Pricing"
         }
         
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            checkAllProductsForCoupons()
+        }
+    }
+    
+    func checkAllProductsForCoupons(){
         
+        for var i = products.count - 1; i >= 0; i-- {
+            let product = products[i]
+            checkCurrentCoupon(product)
+        }
+    }
+    
+    func checkCurrentCoupon(product : Product){
         
+        switch product.title{
+        case "iPad":
+            showCouponView()
+            break
+        default:
+            //No coupon, do Nothing
+            break
+        }
+    }
+    
+    func showCouponView(){
+
+        self.couponView.hidden = false
+        self.view.bringSubviewToFront(self.couponView)
+    }
+    
+    @IBAction func actionSheetButtonPressed(sender: UIButton) {
+        let alert = UIAlertController(title: "Ooops", message: "You better try redeeming from a REAL iPhone :)", preferredStyle: .Alert) // 1
+        
+        presentViewController(alert, animated: true, completion:nil) // 6
+        
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            })
+    }
     }
 }

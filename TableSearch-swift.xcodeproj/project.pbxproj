@@ -17,6 +17,7 @@
 		539AC6011959D3D100C3D028 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539AC5FD1959D3D100C3D028 /* MainStoryboard.storyboard */; };
 		539AC6021959D3D100C3D028 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 539AC5FF1959D3D100C3D028 /* TableCell.xib */; };
 		539AC6051959D3E900C3D028 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539AC6031959D3E900C3D028 /* Images.xcassets */; };
+		5DE8CF9B1C616F1C00B7FAB5 /* gradient2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DE8CF9A1C616F1C00B7FAB5 /* gradient2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		539AC6001959D3D100C3D028 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TableCell.xib; sourceTree = SOURCE_ROOT; };
 		539AC6031959D3E900C3D028 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		539AC6041959D3E900C3D028 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		5DE8CF9A1C616F1C00B7FAB5 /* gradient2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient2.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		5314B8A91954DAAE00F5C22B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5DE8CF9A1C616F1C00B7FAB5 /* gradient2.png */,
 				539AC6031959D3E900C3D028 /* Images.xcassets */,
 				539AC6041959D3E900C3D028 /* Info.plist */,
 				0497A6FB1B3DE8780085AE4B /* LaunchScreen.xib */,
@@ -158,6 +161,7 @@
 			files = (
 				0497A6FD1B3DE8780085AE4B /* LaunchScreen.xib in Resources */,
 				539AC6051959D3E900C3D028 /* Images.xcassets in Resources */,
+				5DE8CF9B1C616F1C00B7FAB5 /* gradient2.png in Resources */,
 				539AC6021959D3D100C3D028 /* TableCell.xib in Resources */,
 				539AC6011959D3D100C3D028 /* MainStoryboard.storyboard in Resources */,
 			);

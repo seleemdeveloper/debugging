@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="w26-b6-vmW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="w26-b6-vmW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -10,8 +10,8 @@
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gen-ib-Cgz" userLabel="DetailViewController" customClass="DetailViewController" customModule="Search_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iCO-3Z-PM5"/>
-                        <viewControllerLayoutGuide type="bottom" id="DNV-d2-1yn"/>
+                        <viewControllerLayoutGuide type="top" id="UMv-1F-F3a"/>
+                        <viewControllerLayoutGuide type="bottom" id="koa-vb-YIn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8hD-Hr-uqh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
@@ -47,12 +47,37 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Purchase"/>
                             </button>
+                            <view hidden="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XW5-K9-O6F">
+                                <rect key="frame" x="0.0" y="167" width="375" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acc-Z4-bU5">
+                                        <rect key="frame" x="110" y="140" width="100" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Redeem">
+                                            <color key="titleColor" red="1" green="0.11854072130426252" blue="0.12097516708429235" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionSheetButtonPressed:" destination="gen-ib-Cgz" eventType="touchUpInside" id="hnn-qs-hlx"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient2.png" translatesAutoresizingMaskIntoConstraints="NO" id="1SP-Av-XJy">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coupon Discovered: Save 10% on this device!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtA-B6-GDT">
+                                        <rect key="frame" x="0.0" y="27" width="320" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92599987440606057" green="0.92599987440606057" blue="0.92599987440606057" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="ziV-cJ-fwE"/>
                     <connections>
+                        <outlet property="couponView" destination="XW5-K9-O6F" id="cVZ-t7-JSb"/>
                         <outlet property="priceLabel" destination="5QI-ay-5fi" id="2oo-l3-4Ut"/>
                         <outlet property="view" destination="8hD-Hr-uqh" id="WAH-yo-NiR"/>
                         <outlet property="yearLabel" destination="ME2-CY-J5p" id="ps2-ek-xk9"/>
@@ -91,12 +116,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Search" id="LG0-9u-bD4"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="480"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZiR-hR-ddR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="152" y="24"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gradient2.png" width="320" height="200"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
