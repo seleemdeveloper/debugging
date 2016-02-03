@@ -90,13 +90,15 @@ class DetailViewController: UIViewController {
         //Below products have low inventory
         
         if product.title == Product.Hardware.iMac.rawValue {
-            priceLabel.hidden = true
+            //priceLabel.hidden = true
+            priceLabel.text = "Please call for pricing"
+            
             
         }
         
         if product.title == Product.Hardware.iPod.rawValue {
-            priceLabel.hidden = true
-            
+            //priceLabel.hidden = true
+            priceLabel.text = "Please call for pricing"
         }
         
     }
