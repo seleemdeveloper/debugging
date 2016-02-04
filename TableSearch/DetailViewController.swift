@@ -109,15 +109,15 @@ class DetailViewController: UIViewController {
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
-            //checkAllProductsForCoupons()
-            checkCurrentCoupon(product)
+            checkAllProductsForCoupons()
+            
         }
     }
     
     func checkAllProductsForCoupons(){
         
-        for product in products{
-            
+        for var i = products.count; i >= 0; i-- {
+            let product = products[i]
             checkCurrentCoupon(product)
         }
     }
